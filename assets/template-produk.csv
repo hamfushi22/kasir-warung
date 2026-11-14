@@ -1,0 +1,9 @@
+nama,sku,barcode,kategori,satuan,harga_beli,harga_jual,harga_grosir,stok,stok_minimum
+Kopi Hitam 165g,BRG-001,8991234567890,Minuman,pcs,8500,10000,9500,24,6
+Gula Pasir 1kg,BRG-002,,Sembako,pcs,16500,18000,17500,30,10
+Minyak Goreng 1L,BRG-003,,Sembako,pcs,36000,39000,38000,18,6
+Mie Instan Goreng,BRG-004,,Makanan,pcs,2900,3500,3200,120,24
+Teh Celup isi 25,BRG-005,,Minuman,dus,11500,14000,13000,12,4
+Rokok Filter 12,BRG-006,,Rokok,pcs,21500,24000,,20,5
+Air Mineral 600ml,BRG-007,,Minuman,pcs,2800,3500,3200,48,12
+Sabun Mandi Batang,BRG-008,,Perawatan,pcs,4500,5500,5000,36,6

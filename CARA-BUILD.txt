@@ -1,0 +1,44 @@
+CARA BUILD APK KASIR WARUNG (di laptop Windows)
+================================================
+
+CARA CEPAT (disarankan):
+1. Ekstrak file ZIP ini ke sebuah folder, misal: C:\kasir-warung-app
+   (klik kanan file ZIP > Extract All)
+2. Buka folder hasil ekstrak, cari file: build-apk.bat
+3. Klik dua kali build-apk.bat, lalu tunggu sampai selesai.
+   - Kalau Flutter belum terinstall, script akan mengunduhnya otomatis
+     (sekitar 1 GB, butuh internet).
+   - Build pertama memakan waktu beberapa menit.
+4. Kalau berhasil, APK ada di:
+   - build\app\outputs\flutter-apk\app-release.apk
+   - dan salinannya di Desktop: KasirWarung.apk
+5. Pindahkan APK ke HP Android, lalu install.
+   (Di HP: izinkan "Install dari sumber tidak dikenal" kalau diminta.)
+
+CARA MANUAL (kalau script gagal):
+1. Install Flutter dari https://flutter.dev/docs/get-started/install/windows
+2. Pastikan Android SDK terinstall (lewat Android Studio).
+3. Buka Command Prompt di folder proyek ini, lalu jalankan:
+     flutter pub get
+     flutter build apk --release
+4. APK ada di build\app\outputs\flutter-apk\app-release.apk
+
+PENTING SETELAH INSTALL:
+- PIN demo: Owner 1234 / Kasir 1111 — GANTI PIN ini di menu Pengaturan > Pengguna.
+- Aplikasi ini Fase 1 (MVP, offline dulu):
+  Nama aplikasi "Kasir Warung", pajak mati (bisa diaktifkan di Pengaturan),
+  QRIS statis (konfirmasi manual), struk dibagikan sebagai teks (belum ada
+  printer Bluetooth), data demo 8 produk contoh (bisa dihapus di menu Produk).
+- Backend/sinkronisasi ke VPS BELUM aktif (sync masih nonaktif).
+
+KALAU BUILD GAGAL:
+- Cek pesan error di jendela hitam, lalu kirim screenshot-nya ke HamXD.
+- Penyebab umum: Flutter belum terinstall, Android SDK tidak ketemu,
+  Java/JDK tidak ada (install Android Studio untuk mendapatkan JDK),
+  atau internet putus saat "flutter pub get".
+- PENTING: Build butuh Java 17. Kalau error menyebut "compatible with
+  Java 8" atau "Could not resolve com.android.tools.build:gradle:8.3.0",
+  berarti Gradle jalan pakai Java 8. Script build-apk.bat sudah diperbaiki
+  (versi terbaru): otomatis memakai JDK bawaan Android Studio, atau
+  mengunduh Microsoft OpenJDK 17 bila belum ada. Jalankan lagi
+  build-apk.bat yang terbaru.
